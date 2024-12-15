@@ -1,0 +1,8 @@
+# WebStorm
+.idea/
+
+# VS Code
+.vscode/
+
+# PDF files
+*.pdf
