@@ -3,6 +3,497 @@
   <head>
     <meta charset="UTF-8" />
     <title>Quiz | Malik's Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/quiz.js"></script>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav>
+        <a href="../index.html">🏠 Home</a>
+        <a href="background.html">Background</a>
+        <a href="curriculum.html">Curriculum</a>
+        <a href="skills.html">Skills</a>
+        <a href="events.html">Events</a>
+        <a href="interests.html">Interests</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="testimonial.html">IIT</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <section class="banner">
+      <h1 class="name">Linux & FOSS Quiz</h1>
+      <p class="banner-subtitle">Test Your Open Source Knowledge</p>
+      <em class="banner-desc"
+        >A quick quiz to test your understanding of Linux and Free/Open Source
+        Software concepts.</em
+      >
+    </section>
+
+    <article class="quiz-container">
+      <form id="quiz-form" onsubmit="return verifyQuiz();">
+        <div class="quiz-card">
+          <h3>1. Which kernel is used in Linux operating systems?</h3>
+          <table
+            class="quiz-options"
+            cellspacing="0"
+            cellpadding="8"
+            border="0"
+            width="100%"
+          >
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q1" value="0" required />
+                  Windows NT kernel
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q1" value="1" />
+                  Linux kernel
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q1" value="2" />
+                  Darwin kernel
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q1" value="3" />
+                  BSD kernel
+                </label>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="quiz-card">
+          <h3>2. What does FOSS stand for?</h3>
+          <table
+            class="quiz-options"
+            cellspacing="0"
+            cellpadding="8"
+            border="0"
+            width="100%"
+          >
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q2" value="0" required />
+                  Free and Open Source Software
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q2" value="1" />
+                  Flexible Operating System Software
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q2" value="2" />
+                  Free Operating System Standards
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q2" value="3" />
+                  Full Open Software System
+                </label>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="quiz-card">
+          <h3>3. Which of these is not a Linux distribution?</h3>
+          <table
+            class="quiz-options"
+            cellspacing="0"
+            cellpadding="8"
+            border="0"
+            width="100%"
+          >
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q3" value="0" required />
+                  Ubuntu
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q3" value="1" />
+                  Fedora
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q3" value="2" />
+                  macOS
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q3" value="3" />
+                  Debian
+                </label>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="quiz-card">
+          <h3>4. What type of license is the GPL?</h3>
+          <table
+            class="quiz-options"
+            cellspacing="0"
+            cellpadding="8"
+            border="0"
+            width="100%"
+          >
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q4" value="0" required />
+                  Proprietary
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q4" value="1" />
+                  Permissive
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q4" value="2" />
+                  Copyleft
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q4" value="3" />
+                  Public Domain
+                </label>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="quiz-card">
+          <h3>5. Which command is used to list files in Linux?</h3>
+          <table
+            class="quiz-options"
+            cellspacing="0"
+            cellpadding="8"
+            border="0"
+            width="100%"
+          >
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q5" value="0" required />
+                  <span class="mono-text">dir</span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q5" value="1" />
+                  <span class="mono-text">show</span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q5" value="2" />
+                  <span class="mono-text">list</span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q5" value="3" />
+                  <span class="mono-text">ls</span>
+                </label>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="quiz-card">
+          <h3>6. What's the default shell in most Linux distributions?</h3>
+          <table
+            class="quiz-options"
+            cellspacing="0"
+            cellpadding="8"
+            border="0"
+            width="100%"
+          >
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q6" value="0" required />
+                  <span class="mono-text">fish</span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q6" value="1" />
+                  <span class="mono-text">bash</span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q6" value="2" />
+                  <span class="mono-text">zsh</span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q6" value="3" />
+                  <span class="mono-text">csh</span>
+                </label>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="quiz-card">
+          <h3>7. Which organization maintains the Linux kernel?</h3>
+          <table
+            class="quiz-options"
+            cellspacing="0"
+            cellpadding="8"
+            border="0"
+            width="100%"
+          >
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q7" value="0" required />
+                  Microsoft
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q7" value="1" />
+                  The Linux Foundation
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q7" value="2" />
+                  Apple
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q7" value="3" />
+                  Red Hat
+                </label>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="quiz-card">
+          <h3>
+            8. What's the purpose of the
+            <span class="mono-text">sudo</span> command?
+          </h3>
+          <table
+            class="quiz-options"
+            cellspacing="0"
+            cellpadding="8"
+            border="0"
+            width="100%"
+          >
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q8" value="0" required />
+                  To search for files
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q8" value="1" />
+                  To execute commands as superuser
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q8" value="2" />
+                  To create directories
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q8" value="3" />
+                  To edit text files
+                </label>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="quiz-card">
+          <h3>9. Which of these is a FOSS alternative to Photoshop?</h3>
+          <table
+            class="quiz-options"
+            cellspacing="0"
+            cellpadding="8"
+            border="0"
+            width="100%"
+          >
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q9" value="0" required />
+                  GIMP
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q9" value="1" />
+                  Paint.NET
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q9" value="2" />
+                  Lightroom
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q9" value="3" />
+                  Picasa
+                </label>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="quiz-card">
+          <h3>
+            10. Which directory typically contains system configuration files in
+            Linux?
+          </h3>
+          <table
+            class="quiz-options"
+            cellspacing="0"
+            cellpadding="8"
+            border="0"
+            width="100%"
+          >
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q10" value="0" required />
+                  <span class="mono-text">/home</span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q10" value="1" />
+                  <span class="mono-text">/etc</span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q10" value="2" />
+                  <span class="mono-text">/bin</span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="quiz-option">
+                  <input type="radio" name="q10" value="3" />
+                  <span class="mono-text">/usr</span>
+                </label>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <button type="submit" class="submit-button">Submit Quiz</button>
+      </form>
+    </article>
+
+    <footer>
+      <a href="https://github.com/mal1k-me" target="_blank">
+        <img src="../media/github.png" alt="GitHub" class="footer-icon" />GitHub
+      </a>
+      <a href="https://linkedin.com/in/malik-zouari" target="_blank">
+        <img
+          src="../media/linkedin.png"
+          alt="LinkedIn"
+          class="footer-icon"
+        />LinkedIn
+      </a>
+      <a href="#" class="back-to-top">⬆️ Top</a>
+    </footer>
+  </body>
 </html>

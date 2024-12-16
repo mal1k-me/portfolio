@@ -1,0 +1,816 @@
+:root {
+  --primary: #9d4eff;
+  --autumn1: #ff9f4d;
+  --autumn2: #ffc14d;
+  --surface: #121212;
+  --card-bg: #1e1e1e;
+  --text: #e1e1e1;
+  --radius: 16px;
+}
+
+body {
+  margin: 0;
+  font-family:
+    "Noto Sans",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  background: var(--surface);
+  color: var(--text);
+}
+
+header {
+  background: var(--card-bg);
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+nav a {
+  color: var(--primary);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-weight: 700;
+  margin: 0 1rem;
+}
+
+nav a:hover {
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 0 15px var(--primary);
+}
+
+.banner {
+  min-height: 40vh;
+  text-align: center;
+  background: var(--card-bg);
+  position: relative;
+  z-index: 1;
+  padding: 2rem 1rem;
+  font-family: "Crimson Text", "Palatino Linotype", "Book Antiqua",
+    "URW Palladio L", Palatino, serif;
+}
+
+.banner:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(157, 78, 255, 0.1),
+    rgba(157, 78, 255, 0.1) 20px,
+    transparent 20px,
+    transparent 40px
+  );
+  z-index: -1;
+}
+
+.banner-content {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1rem auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--primary);
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.banner-subtitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.banner-desc {
+  width: 100%;
+  max-width: 600px;
+  margin: 1rem auto;
+  text-align: center;
+  opacity: 0.9;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.name {
+  font-size: 3rem;
+  color: var(--primary);
+  font-family:
+    "Noto Sans",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.content-card {
+  background: var(--card-bg);
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-family: "Fira Mono", "Consolas", "Monaco", monospace;
+  height: 350px;
+}
+
+.content-card h2 {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.content-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.content-card a {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  color: var(--text);
+  text-decoration: none;
+  position: relative;
+  border-radius: 4px;
+  margin: 0.25rem 0;
+  float: left;
+  width: 85%;
+}
+
+.content-card a:hover {
+  background: var(--card-bg);
+  color: var(--primary);
+  box-shadow: 0 0 15px var(--primary);
+  border-radius: 4px;
+}
+
+.content-card a[href*="background"]:hover:after {
+  content: " 🎓";
+}
+.content-card a[href*="curriculum"]:hover:after {
+  content: " 📖";
+}
+.content-card a[href*="skills"]:hover:after {
+  content: " 💻";
+}
+.content-card a[href*="events"]:hover:after {
+  content: " 🎯";
+}
+.content-card a[href*="interests"]:hover:after {
+  content: " ⭐";
+}
+
+.content-card li {
+  padding: 0.5rem 0;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+
+.background-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.timeline-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid var(--primary);
+  background: var(--surface);
+}
+
+.card-content {
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.card-content h2 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-family:
+    "Noto Sans",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+}
+
+.card-content .date {
+  color: var(--autumn1);
+  font-family: "Fira Mono", "Consolas", "Monaco", monospace;
+  margin-bottom: 1rem;
+}
+
+.card-content p {
+  line-height: 1.6;
+  text-align: justify;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: var(--card-bg);
+  margin-top: 2rem;
+}
+
+.footer-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+footer a {
+  color: var(--primary);
+  text-decoration: none;
+  margin: 0 1rem;
+  align-items: center;
+}
+
+footer a:hover {
+  color: var(--autumn1);
+}
+
+.wiki-layout {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.wiki-nav {
+  width: 250px;
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  margin-right: 20px;
+  text-align: left;
+  height: 1000px;
+}
+
+.wiki-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+  width: 100%;
+}
+
+.wiki-nav ul ul {
+  margin-left: 1rem;
+  margin-top: 0.25rem;
+  font-size: 0.9em;
+}
+
+.wiki-nav ul ul a {
+  padding: 0.25rem 0.5rem;
+  opacity: 0.8;
+}
+
+.wiki-nav ul ul a:hover {
+  opacity: 1;
+}
+
+.wiki-nav li {
+  margin: 0.5rem 0;
+  padding: 0;
+  width: 100%;
+  float: left;
+}
+
+.wiki-nav a {
+  padding: 0.5rem;
+  color: var(--text);
+  text-decoration: none;
+  border-radius: 4px;
+  line-height: 1.4;
+  width: 90%;
+  margin: 0.25rem 0;
+  float: left;
+}
+
+.wiki-nav a:hover {
+  color: white;
+  background: var(--primary);
+}
+
+.wiki-nav-title {
+  color: var(--primary);
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.wiki-content {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: auto;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.wiki-content h2 {
+  color: var(--primary);
+  font-family:
+    "Noto Sans",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  margin-top: 2rem;
+}
+
+.wiki-content h2 a,
+.wiki-content h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wiki-content h2 a:hover,
+.wiki-content h3 a:hover {
+  color: var(--autumn1);
+}
+
+.wiki-content h3 {
+  color: var(--autumn1);
+  margin-top: 1.5rem;
+  font-family:
+    "Noto Sans",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+}
+
+.wiki-content p {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.wiki-content ul {
+  padding-left: 1.5rem;
+}
+
+.wiki-content li {
+  margin-bottom: 1rem;
+}
+
+.wiki-content strong {
+  color: var(--primary);
+}
+
+.wiki-content em {
+  color: var(--autumn2);
+}
+
+.quiz-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.quiz-card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.quiz-card h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-family:
+    "Noto Sans",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+}
+
+.quiz-options {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.quiz-options td {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 0.8rem;
+  height: 2.5rem;
+}
+
+.quiz-options td:hover {
+  background: rgba(157, 78, 255, 0.1);
+}
+
+.quiz-option {
+  width: 100%;
+  float: left;
+  padding: 0.5rem;
+}
+
+.quiz-option input {
+  float: left;
+  margin: 0.2rem 0.5rem 0 0;
+}
+
+.submit-button {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  margin-left: -100px;
+  padding: 1rem;
+  border: none;
+  border-radius: var(--radius);
+  background: #4caf50;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.submit-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.score-display {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.results-table-container {
+  overflow-x: auto;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.results-table th,
+.results-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.results-table th {
+  background: rgba(157, 78, 255, 0.1);
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.result-icon {
+  font-size: 1.2rem;
+  cursor: help;
+}
+
+.correct {
+  color: #4caf50;
+}
+
+.incorrect {
+  color: #f44336;
+}
+
+.mono-text {
+  font-family: "Fira Mono", "Consolas", "Monaco", monospace;
+  background: rgba(157, 78, 255, 0.1);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.contact-form {
+  background: var(--card-bg);
+  padding: 3rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid rgba(157, 78, 255, 0.1);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+  max-height: 500px;
+  line-height: 1.6;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(157, 78, 255, 0.2);
+}
+
+.direct-contact {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: "Fira Mono", "Consolas", "Monaco", monospace;
+}
+
+.email-link {
+  color: var(--primary);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  background: var(--card-bg);
+}
+
+.email-link:hover {
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-letter {
+  background: rgba(30, 30, 30, 0.95);
+  padding: 3rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-family: "Crimson Text", "Palatino Linotype", "Book Antiqua", serif;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+.testimonial-letter p {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  color: var(--text);
+}
+
+.testimonial-letter p:first-of-type:first-letter {
+  font-size: 3.5em;
+  float: left;
+  padding-right: 0.1em;
+  line-height: 0.7;
+  color: var(--primary);
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.skills-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 1rem;
+}
+
+.skills-table td {
+  padding: 0;
+  vertical-align: top;
+}
+
+.skill-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  height: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.skill-icon {
+  display: block;
+  margin: 0 auto 1rem;
+  width: auto;
+  height: 128px;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.skill-card h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family:
+    "Noto Sans",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+}
+
+.skill-card p {
+  text-align: justify;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.skill-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-highlights li {
+  padding: 0.5rem 0;
+  color: var(--text);
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill-highlights li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--autumn1);
+}
+
+.interests-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.interests-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 1rem;
+  margin-bottom: 2rem;
+}
+
+.interests-table td {
+  padding: 0;
+  vertical-align: top;
+}
+
+.interest-card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  height: 100%;
+}
+
+.wide-card {
+  margin-top: 2rem;
+}
+
+.wide-card h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.back-to-top {
+  color: var(--autumn2);
+  text-decoration: none;
+  margin-left: auto;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.back-to-top:hover {
+  color: white;
+  background: var(--autumn1);
+}
+
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+#bg-video {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: top;
+  opacity: 0.15;
+}
+
+.wiki-layout table {
+  width: 100%;
+  border-spacing: 20px;
+  border-collapse: separate;
+  margin: 0;
+  padding: 0;
+}
+
+.wiki-layout td {
+  vertical-align: top;
+  padding: 0;
+  height: 100%;
+}
+
+aside.wiki-nav {
+  width: 250px;
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  margin-right: 20px;
+  text-align: left;
+  min-height: 600px;
+  height: 1000px;
+}
+
+article.wiki-content {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: auto;
+  text-align: left;
+  margin-left: 20px;
+}
+
+section.wiki-layout {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.event-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-bottom: 2px solid var(--primary);
+  background: var(--surface);
+}

@@ -3,6 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <title>Contact | Malik's Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav>
+        <a href="../index.html">🏠 Home</a>
+        <a href="background.html">Background</a>
+        <a href="curriculum.html">Curriculum</a>
+        <a href="skills.html">Skills</a>
+        <a href="events.html">Events</a>
+        <a href="interests.html">Interests</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="testimonial.html">IIT</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <section class="banner">
+      <h1 class="name">Get in Touch</h1>
+      <p class="banner-subtitle">Let's Connect!</p>
+      <em class="banner-desc"
+        >Have a question or want to collaborate? Feel free to drop me a
+        message.</em
+      >
+    </section>
+
+    <article class="contact-container">
+      <div class="direct-contact">
+        <p>
+          Or reach me directly at:
+          <a href="mailto:malik.zouari@iit.ens.tn" class="email-link">
+            malik.zouari@iit.ens.tn
+          </a>
+        </p>
+      </div>
+
+      <form class="contact-form" onsubmit="return validateForm();">
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="8"></textarea>
+        </div>
+
+        <button type="submit" class="submit-button" id="sendButton">
+          Send Message 📤
+        </button>
+      </form>
+    </article>
+
+    <footer>
+      <a href="https://github.com/mal1k-me" target="_blank">
+        <img src="media/github.png" alt="GitHub" class="footer-icon" />GitHub
+      </a>
+      <a href="../https://linkedin.com/in/malik-zouari" target="_blank">
+        <img
+          src="../media/linkedin.png"
+          alt="LinkedIn"
+          class="footer-icon"
+        />LinkedIn
+      </a>
+      <a href="#" class="back-to-top">⬆️ Top</a>
+    </footer>
+
+    <script src="../js/contact.js"></script>
+  </body>
 </html>
